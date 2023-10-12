@@ -49,10 +49,10 @@ const CreatePost = () => {
           // Update the form.photo state with the image URL
           setForm({ ...form, photo: data.photo });
         } else {
-          alert("Invalid response from the API");
+          console.log("Invalid response from the API");
         }
       } catch (err) {
-        alert(err);
+        console.log(err)
       } finally {
         setGeneratingImg(false);
       }
@@ -78,10 +78,9 @@ const CreatePost = () => {
         });
 
         await response.json();
-        alert("Success");
         navigate("/");
       } catch (err) {
-        alert(err);
+        console.log(err);
       } finally {
         setLoading(false);
       }
