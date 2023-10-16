@@ -2,7 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 
 import { Loader, FormField } from '../components';
 
-const LazyCard = lazy(() => import('../components/Card'));
+const LazyCard = lazy(() => import('../components/Card.jsx'));
 
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0) {
