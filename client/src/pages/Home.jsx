@@ -7,7 +7,7 @@ const LazyCard = lazy(() => import('../components/Card.jsx'));
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0) {
     return data.map((post) => (
-      <Suspense fallback={<div>Loading...</div>} key={post.id}>
+      <Suspense fallback={<div><Loader /></div>} key={post.id}>
         <LazyCard {...post} />
       </Suspense>
     ));
