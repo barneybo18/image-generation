@@ -6,7 +6,7 @@ import cors from "cors"
 //Enable CORS for all routes
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173/create-post', // Replace with your client's URL
+    origin: 'http://localhost:5173/createpost', // Replace with your client's URL
     credentials: true,
   }));
 
